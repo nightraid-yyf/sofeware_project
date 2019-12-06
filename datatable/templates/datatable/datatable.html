@@ -1,0 +1,48 @@
+{% load staticfiles %}
+{% include 'datatable/head.html' %}
+<body class="app">
+    {% include 'datatable/top.html' %}
+	{% include 'datatable/side.html' %}
+	<div class="app-content">
+
+		<p>报警时间添加</p>
+			<section class="section">    
+				<div class="row">
+					<div class="card">
+						<div class="card-body">
+                            
+                            <form class="form" id="entry_form" action="" method="POST">
+                            {% csrf_token %}
+                                <table border="0">
+                                    <tr>
+                                        <td>发生街道</td>
+                                        <td>&nbsp&nbsp不知道是什么</td>
+                                        <td>&nbsp&nbsp年</td>
+                                        <td>&nbsp&nbsp月</td>
+                                        <td>&nbsp&nbsp日</td>
+                                    </tr>
+                                    <tr>
+                                            <td><input type="text" id="typed" name="1"></td>
+                                            <td>&nbsp&nbsp<input type="text" id="typed" name="2" onclick="1"></td>
+                                            <td>&nbsp&nbsp<input type="text" id="typed" name="3"></td>
+                                            <td>&nbsp&nbsp<input type="text" id="typed" name="4"></td>
+                                            <td>&nbsp&nbsp<input type="text" id="typed" name="5"></td>
+                                            <td>&nbsp&nbsp<button type="submit" id="entry_btn">提交</button></td>
+                                    </tr>
+                                </table>
+                             </form>
+						</div>
+					</div>
+				</div>
+			</section>
+	</div>
+</body>
+{% include 'datatable/js.html' %}
+<datalist ID="typed">
+		<option value="桃园街道">
+		<option value="西丽街道">
+		<option value="1">
+		<option value="2">
+		<option value="3">
+		<option value="4">
+</datalist>

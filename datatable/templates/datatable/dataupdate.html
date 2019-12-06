@@ -1,0 +1,126 @@
+{% load staticfiles %}
+{% include 'datatable/head.html' %}
+<body class="app">
+    {% include 'datatable/top.html' %}
+	{% include 'datatable/side.html' %}
+	<div class="app-content">
+
+		<p style=" text-align:center"><font  size="5">报警时间修改</font></p>
+			<section class="section" >    
+				<div class="row" >
+					<div class="card"  style="margin:0 auto;" >
+						<div class="card-body" >
+                            <form class="form" id="entry_form" action="" method="POST" >
+                                <table border="0" >
+                                    <tr>
+									    <td>&nbsp&nbsp事件id&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="number">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+                                        <td>&nbsp&nbsp发生街道&nbsp&nbsp<input type="text" list="street"></td>
+                                    </tr>
+									<tr>
+									            <td>&nbsp&nbsp</td>
+									</tr>
+									<tr>
+									            <td>&nbsp&nbsp</td>
+									</tr>
+                                    <tr>
+											<td>&nbsp&nbsp选择社区&nbsp&nbsp<input type="text" list="comunity"></td>
+                                            <td>&nbsp&nbsp事件类型&nbsp&nbsp<input type="text" list="eventtype"></td>
+                                    </tr>
+									<tr>
+									            <td>&nbsp&nbsp</td>
+									</tr>
+									<tr>
+									            <td>&nbsp&nbsp</td>
+									</tr>
+									<tr>
+											<td>&nbsp&nbsp选择大类&nbsp&nbsp<input type="text" list="comunity"></td>
+                                            <td>&nbsp&nbsp选择小类&nbsp&nbsp<input type="text" list="eventtype"></td>
+                                    </tr>
+									<tr>
+									            <td>&nbsp&nbsp</td>
+									</tr>
+									<tr>
+									            <td>&nbsp&nbsp</td>
+									</tr>
+									<tr>
+											<td for="meeting">&nbsp&nbsp选择日期&nbsp&nbsp<input id="meeting" type="date"/ value="2019--"></td>
+											<td>&nbsp&nbsp是否应急&nbsp&nbsp<input type="text" list="ifnec"></td>
+									</tr>
+									<tr>
+									            <td>&nbsp&nbsp</td>
+									</tr>
+									<tr>
+									            <td>&nbsp&nbsp</td>
+									</tr>
+									<tr>
+										<td align="center" colspan="2">
+												<input align ="center" type="button" id="entry_btn" class = "button" value="查询"></input>
+										</td>
+									</tr>
+                                </table>
+                             </form>
+						</div>
+					</div>
+				</div>
+			</section>
+	</div>
+</body>
+{% include 'datatable/js.html' %}`
+<datalist ID="street">
+		<option value="马峦街道">
+		<option value="石井街道">
+		<option value="坪山街道">
+		<option value="龙田街道">
+		<option value="碧岭街道">
+		<option value="坑梓街道">
+</datalist>
+<datalist ID="comunity">
+		<option value="南布社区">
+		<option value="和平社区">
+		<option value="坪山社区">
+		<option value="六和社区">
+		<option value="汤坑社区">
+		<option value="石井社区">
+		<option value="老坑社区">
+		<option value="沙湖社区">
+		<option value="秀新社区">
+		<option value="金沙社区">
+		<option value="碧岭社区">
+		<option value="坪环社区">
+		<option value="沙田社区">
+		<option value="龙田社区">
+		<option value="六联社区">
+		<option value="沙坣社区">
+		<option value="江岭社区">
+		<option value="金龟社区">
+		<option value="田头社区">
+		<option value="坑梓社区">
+		<option value="田心社区">
+		<option value="龙田社区">
+		<option value="竹坑社区">
+		<option value="马峦社区">
+</datalist>
+<datalist ID="eventtype">
+		<option value="市容环卫">
+		<option value="环保水务">
+		<option value="市政设施">
+		<option value="规土城建">
+		<option value="教育卫生">
+		<option value="安全隐患">
+		<option value="组织人事">
+		<option value="党纪政纪">
+		<option value="劳动社保">
+		<option value="社区管理">
+		<option value="交通运输">
+		<option value="治安维修">
+		<option value="民政服务">
+		<option value="文体旅游">
+		<option value="食药市监">
+		<option value="党建群团">
+		<option value="统一战线">
+		<option value="专业事件采集">
+</datalist>
+<datalist ID="ifnec">
+		<option value="应急">
+		<option value="非应急">
+</datalist>

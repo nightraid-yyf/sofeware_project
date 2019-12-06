@@ -1,0 +1,45 @@
+{% load staticfiles %}
+<div class="main-wrapper" >
+	<nav class="navbar navbar-expand-lg main-navbar" >
+		<a class="header-brand" href="/chart_mymap">
+			<img src="{% static 'chart/datatable/img/logo.png' %}" class="header-brand-img" alt="Harbin Institute Of Technology_Software Project"></img>
+		</a>
+		<form class="form-inline">
+			<ul class="navbar-nav mr-3">
+				<li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="ion ion-navicon-round"></i></a></li>
+				<li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-md-none navsearch"><i class="ion ion-search"></i></a></li>
+			</ul>
+		</form>
+        <div class="middle-brand">
+			<img src="{% static 'chart/datatable/img/logo2.png' %}" class="middle-brand-img" alt="Harbin Institute Of Technology_Software Project"></img>
+		</div>
+		<ul class="navbar-nav navbar-right">
+			<li class="dropdown dropdown-list-toggle">
+				<a href="#" class="nav-link nav-link-lg full-screen-link">
+					<i class="ion-arrow-expand"  id="fullscreen-button"></i>
+				</a>
+			</li>
+			<li class="dropdown">
+                {% if lv == 1 %}
+                <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg">
+				<img src="https://img04.sogoucdn.com/v2/thumb/resize/w/120/h/90/zi/on/iw/90.0/ih/67.5?t=2&url=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20190929%2F0f5bcee8347f4addaadcda85f70870bc.jpeg&appid=200524" alt="profile-user" class="rounded-circle w-32">
+                <div class="d-sm-none d-lg-inline-block">{{username}}</div></a>
+				<div class="dropdown-menu dropdown-menu-right">
+					<a href="/datauser" class="dropdown-item has-icon">
+						<i class="ion ion-android-person"></i>个人中心
+					</a>
+                    <a href="/changepsw" class="dropdown-item has-icon">
+						<i class="ion ion-android-person"></i>修改密码
+					</a>
+					<a href="/logout" class="dropdown-item has-icon">
+						<i class="ion-ios-redo"></i>注销
+					</a>
+				</div>
+                {% else %}
+                <div style="width:100%;height:100%;"><a href="/login" style="position: relative;top:35%">政府登录入口</a></div>
+                {% endif %}
+			</li>
+		</ul>
+	</nav>
+	</div>
+	

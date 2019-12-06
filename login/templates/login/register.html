@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+{% load staticfiles %}
+{% include 'login/head.html' %}
+
+<html>
+<body style="background:url(/static/login/img/login-bg.png) no-repeat;background-size:cover; ">
+		<div id="app">
+			<div class="container">
+					<div class="row">
+						<div class="single-page single-pageimage single-page cover-image " data-image-src="/static/login/img/logo3.png" style="opacity:0.95">
+							<div class="row">
+								<div class="col-lg-6">
+									<div class="log-wrapper text-center">
+										<div style="margin-top:95%;margin-bottom:-15%;font:黑体;color:gray">
+											copyright@HITSZ_SOFTWARE_GROUP_EIGHT
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6" style="margin-top:3%;opacity:0.99">
+									<div class="wrapper wrapper2">
+										<form id="login" class="card-body" tabindex="500" method="POST" onsubmit="return check()">
+                                            {% csrf_token %}
+											<h3>注册</h3>
+											<div class="mail">
+												<input type="text" id="username" name="username"/>
+												<label>请输入用户名</label>
+											</div>
+											<div class="passwd">
+												<input type="password" id="password-1" name="password"/>
+												<label>请输入密码</label>
+											</div>
+											<div class="passwd">
+												<input type="password" id="password-2" name="password_check"/>
+												<label>请再次输入密码</label>
+											</div>
+                                            <div class="mail">
+												<input type="text" value="" id="input-val" name="code"/><span> <canvas id="canvas" style="width:100px;height:32px;background-color: white;margin-top:-12%;float:right"></canvas></span>
+                                                <script type="text/javascript" src="{% static 'login/js/logincode.js' %}"></script>
+                                                <label>验证码</label>
+											</div>
+											<div class="submit">
+												<button type="submit" class="btn btn-primary btn-block"id="entry_btn">注册</button>
+											</div>
+											<p class="text-dark mb-0" style="color:white">注册<a href="/login" class="text-primary ml-1">已有帐号，去登陆</a></p>
+										</form>
+									</div>
+								</div>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    {% include 'login/js.html' %}
+	</body>
+</html>
+
+
+{% if msg %}
+<script>alert("{{msg}}")</script>
+{% endif %}
+
+<script type="text/javascript">
+    function check() {
+        var uid = $("#username").val();
+        if (uid == null || uid == "") {
+            alert("用户名不能为空");
+            return false;
+        }
+        var uid2 = $("#password-1").val();
+        if (uid2 == null || uid2 == "") {
+            alert("密码不能为空");
+            return false;
+        }
+        var uid3 = $("#password-2").val();
+        if (uid3 == null || uid3 == "") {
+            alert("请再次输入，确认密码");
+            return false;
+        }
+        if (uid2 != uid3) {
+            alert("两次输入密码不同！");
+            return false;
+        }
+        var uid4 = $("#input-val").val();
+        if (uid4 == null || uid4 == "") {
+            return false;
+        }
+        return true;
+    }
+    
+</script>

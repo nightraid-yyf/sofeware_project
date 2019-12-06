@@ -1,0 +1,84 @@
+﻿{% load staticfiles %}
+{% include 'login/head.html' %}
+
+
+
+
+
+
+
+<html lang="en">
+	<body style="background:url(static/login/img/login-bg.png) no-repeat;background-size:cover; ">
+		<div id="app">
+			<div class="container">
+					<div class="row">
+						<div class="single-page single-pageimage single-page cover-image " data-image-src="static/login/img/logo3.png" style="opacity:0.95">
+							<div class="row">
+								<div class="col-lg-6">
+								    <div class="log-wrapper text-center">
+                                         <div style="margin-top:95%;margin-bottom:-15%;font:黑体;color:gray">
+												    copyright@HITSZ_SOFTWARE_GROUP_EIGHT
+									     </div>
+								    </div>
+								</div>
+								<div class="col-lg-6" style="margin-top:5%;opacity:0.8">
+									<div class="wrapper wrapper2">
+										<form id="login" class="card-body" tabindex="500" method="POST" onsubmit="return check()"> 
+                                            {% csrf_token %}
+											<h3>登录</h3>
+											<div class="mail">
+												<input type="text" name="username" id="username"/>
+												<label>用户名</label>
+											</div>
+											<div class="mail">
+												<input type="password" name="password" id="password"/>
+												<label>密码</label>
+											</div>
+                                            <div class="mail">
+												<input type="text" value="" id="input-val" name="code"/><canvas id="canvas" style="width:100px;height:32px;background-color: white;margin-top:-12%;float:right"></canvas>
+                                                <script type="text/javascript" src="{% static 'login/js/logincode.js' %}"></script>
+                                                <label>验证码</label>
+											</div>
+											
+											<div class="submit">
+												<button id="entry_btn" type="submit" class="btn btn-primary btn-block">登录</button>
+											</div>
+											
+											<p class="text-dark mb-0">还未拥有账户?   <a href="/register" class="text-primary ml-1">马上注册</a></p>
+
+										</form>
+									</div>
+								</div>
+							</div>
+					</div>
+				</div>
+		    </div>
+		</div>
+    </body>
+{% include 'login/js.html' %}
+</html>
+
+{% if msg %}
+<script>alert("{{msg}}")</script>
+{% endif %}
+
+<script type="text/javascript">
+    function check() {
+        var uid = $("#username").val();
+        if (uid == null || uid == "") {
+            alert("用户名不能为空");
+            return false;
+        }
+        var uid2 = $("#password").val();
+        if (uid2 == null || uid2 == "") {
+            alert("密码不能为空");
+            return false;
+        }
+        var uid4 = $("#input-val").val();
+        if (uid4 == null || uid4 == "") {
+            return false;
+        }
+        return true;
+    }
+    
+</script>

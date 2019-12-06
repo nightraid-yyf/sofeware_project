@@ -1,0 +1,21 @@
+{% load staticfiles %}
+<head>
+	<title> 实时报警系统</title>
+
+		<!--Bootstrap.min css-->
+		<link rel="stylesheet" href="{% static 'datatable/css/bootstrap.min.css' %}">
+		<link rel="stylesheet" href="{% static 'datatable/css/bootstrap.css' %}">
+		<!--Icons css-->
+		<link rel="stylesheet" href="{% static 'datatable/css/icons.css' %}">
+		<!--Style css-->
+		<link rel="stylesheet" href="{% static 'datatable/css/style.css' %}">
+		<!--Sidemenu css-->
+		<link rel="stylesheet" href="{% static 'datatable/css/sidemenu.css' %}">
+		<!--morris css-->
+		<link rel="stylesheet" href="{% static 'datatable/css/morris.css' %}">
+        {% if lv == 1 %}
+            <link rel="stylesheet" href={{maincolor}}>
+        {% else %}
+            <link rel="stylesheet" href="/static/datatable/css/maincolor_blue.css">
+        {% endif %}
+</head>

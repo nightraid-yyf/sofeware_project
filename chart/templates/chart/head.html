@@ -1,0 +1,21 @@
+﻿{% load staticfiles %}
+<title> 实时报警系统</title>
+        <meta charset="UTF-8">
+		<!--Bootstrap.min css-->
+		<link rel="stylesheet" href="{% static 'chart/datatable/css/bootstrap.min.css' %}">
+		<link rel="stylesheet" href="{% static 'chart/datatable/css/bootstrap.css' %}">
+		<!--Icons css-->
+		<link rel="stylesheet" href="{% static 'chart/datatable/css/icons.css' %}">
+		<!--Style css-->
+		<link rel="stylesheet" href="{% static 'chart/datatable/css/style.css' %}">
+		<!--Sidemenu css-->
+		<link rel="stylesheet" href="{% static 'chart/datatable/css/sidemenu.css' %}">
+		<!--morris css-->
+		<link rel="stylesheet" href="{% static 'chart/datatable/css/morris.css' %}">
+        {% if lv == 1 %}
+            <link rel="stylesheet" href={{maincolor}}>
+        {% else %}
+            <link rel="stylesheet" href="/static/chart/datatable/css/maincolor_blue.css">
+        {% endif %}
+        <script src="{% static 'chart/map/js/jquery-1.7.2.js' %}"></script>
+        <script src="{% static 'chart/map/js/echarts.js' %}"></script>

@@ -1,0 +1,1017 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Name>oursite</Name>
+    <RootNamespace>oursite</RootNamespace>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+    <TestFramework>Pytest</TestFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>42829b5c-b27e-4d18-95e8-8a4d25ecffdf</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <DjangoSettingsModule>oursite.settings</DjangoSettingsModule>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <OutputPath>.</OutputPath>
+    <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="chart\admin.py" />
+    <Compile Include="chart\alert.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="chart\apps.py" />
+    <Compile Include="chart\migrations\__init__.py" />
+    <Compile Include="chart\models.py" />
+    <Compile Include="chart\mysql.py" />
+    <Compile Include="chart\tests.py" />
+    <Compile Include="chart\views.py" />
+    <Compile Include="chart\__init__.py" />
+    <Compile Include="datatable\admin.py" />
+    <Compile Include="datatable\apps.py" />
+    <Compile Include="datatable\migrations\__init__.py" />
+    <Compile Include="datatable\models.py" />
+    <Compile Include="datatable\tests.py" />
+    <Compile Include="datatable\views.py" />
+    <Compile Include="datatable\__init__.py" />
+    <Compile Include="login\admin.py" />
+    <Compile Include="login\apps.py" />
+    <Compile Include="login\migrations\__init__.py" />
+    <Compile Include="login\models.py" />
+    <Compile Include="login\tests.py" />
+    <Compile Include="login\views.py" />
+    <Compile Include="login\__init__.py" />
+    <Compile Include="manage.py" />
+    <Compile Include="oursite\models.py" />
+    <Compile Include="oursite\__init__.py" />
+    <Compile Include="oursite\settings.py" />
+    <Compile Include="oursite\urls.py" />
+    <Compile Include="oursite\wsgi.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="chart\static\chart\datatable\css\bootstrap-theme.css" />
+    <Content Include="chart\static\chart\datatable\css\bootstrap-theme.css.map" />
+    <Content Include="chart\static\chart\datatable\css\bootstrap-theme.min.css" />
+    <Content Include="chart\static\chart\datatable\css\bootstrap-theme.min.css.map" />
+    <Content Include="chart\static\chart\datatable\css\bootstrap.css" />
+    <Content Include="chart\static\chart\datatable\css\bootstrap.css.map" />
+    <Content Include="chart\static\chart\datatable\css\bootstrap.min.css" />
+    <Content Include="chart\static\chart\datatable\css\bootstrap.min.css.map" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\feathericons\feather\feather-webfont.eot" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\feathericons\feather\feather-webfont.svg" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\feathericons\feather\feather-webfont.ttf" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\feathericons\feather\feather-webfont.woff" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\feathericons\style.css" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\font-awesome\css\font-awesome.min.css" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\Glyphicons\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\Glyphicons\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\Glyphicons\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\Glyphicons\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\Glyphicons\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\Glyphicons\glyphicon.css" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\ionicons\css\ionicons.min.css" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\ionicons\fonts\ionicons.eot" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\ionicons\fonts\ionicons.svg" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\ionicons\fonts\ionicons.ttf" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\ionicons\fonts\ionicons.woff" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\Linearicons\fonts\Linearicons-Free.eot" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\Linearicons\fonts\Linearicons-Free.svg" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\Linearicons\fonts\Linearicons-Free.ttf" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\Linearicons\fonts\Linearicons-Free.woff" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\Linearicons\fonts\Linearicons-Free.woff2" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\Linearicons\Linearicons.css" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\materialdesignicons\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\materialdesignicons\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\materialdesignicons\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\materialdesignicons\fonts\materialdesignicons-webfont.eot" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\materialdesignicons\fonts\materialdesignicons\materialdesignicons-webfont.svg绺_2.0.46" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\materialdesignicons\fonts\materialdesignicons\materialdesignicons-webfont.ttf绺_2.0.46" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\materialdesignicons\fonts\materialdesignicons\materialdesignicons-webfont.woff绺_2.0.46" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\materialdesignicons\materialdesignicons.css" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\Pe-icon-7-stroke\fonts\Pe-icon-7-stroke.eot" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\Pe-icon-7-stroke\fonts\Pe-icon-7-stroke.svg" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\Pe-icon-7-stroke\fonts\Pe-icon-7-stroke.ttf" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\Pe-icon-7-stroke\fonts\Pe-icon-7-stroke.woff" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\Pe-icon-7-stroke\Pe-icon-7.css" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\simple-line-icons\fonts\Simple-Line-Icons.eot" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\simple-line-icons\fonts\Simple-Line-Icons.svg" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\simple-line-icons\fonts\Simple-Line-Icons.ttf" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\simple-line-icons\fonts\Simple-Line-Icons.woff" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\simple-line-icons\fonts\Simple-Line-Icons.woff2" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\simple-line-icons\simple-line-icons.css" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\themify\fonts\themify.eot" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\themify\themify.css" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\typicons\fonts\typicons.eot" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\typicons\fonts\typicons.svg" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\typicons\fonts\typicons.ttf" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\typicons\fonts\typicons.woff" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\typicons\typicons.css" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\weathericons\fonts\weathericons-regular-webfont.eot" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\weathericons\fonts\weathericons-regular-webfont.svg" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\weathericons\fonts\weathericons-regular-webfont.ttf" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\weathericons\fonts\weathericons-regular-webfont.woff" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\weathericons\fonts\weathericons-regular-webfont.woff2" />
+    <Content Include="chart\static\chart\datatable\css\iconfonts\weathericons\weathericons.css" />
+    <Content Include="chart\static\chart\datatable\css\icons.css" />
+    <Content Include="chart\static\chart\datatable\css\morris.css" />
+    <Content Include="chart\static\chart\datatable\css\sidemenu.css" />
+    <Content Include="chart\static\chart\datatable\css\style.css" />
+    <Content Include="chart\static\chart\datatable\img\logo.png" />
+    <Content Include="chart\static\chart\datatable\js\apexcharts.js" />
+    <Content Include="chart\static\chart\datatable\js\barcharts.js" />
+    <Content Include="chart\static\chart\datatable\js\bootstrap.js" />
+    <Content Include="chart\static\chart\datatable\js\bootstrap.min.js" />
+    <Content Include="chart\static\chart\datatable\js\calender.js" />
+    <Content Include="chart\static\chart\datatable\js\chart.min.js" />
+    <Content Include="chart\static\chart\datatable\js\chartjs.js" />
+    <Content Include="chart\static\chart\datatable\js\dashboard.js" />
+    <Content Include="chart\static\chart\datatable\js\dashboard2.js" />
+    <Content Include="chart\static\chart\datatable\js\dashboard3.js" />
+    <Content Include="chart\static\chart\datatable\js\dataclick.js" />
+    <Content Include="chart\static\chart\datatable\js\echarts.js" />
+    <Content Include="chart\static\chart\datatable\js\flot.js" />
+    <Content Include="chart\static\chart\datatable\js\formeditor.js" />
+    <Content Include="chart\static\chart\datatable\js\forms.js" />
+    <Content Include="chart\static\chart\datatable\js\gmaps.js" />
+    <Content Include="chart\static\chart\datatable\js\jquery.googlemap.js" />
+    <Content Include="chart\static\chart\datatable\js\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="chart\static\chart\datatable\js\jquery.mCustomScrollbar.css" />
+    <Content Include="chart\static\chart\datatable\js\jquery.min.js" />
+    <Content Include="chart\static\chart\datatable\js\jquery.nicescroll.min.js" />
+    <Content Include="chart\static\chart\datatable\js\jquery.ui-sliders.js" />
+    <Content Include="chart\static\chart\datatable\js\jvectormap.js" />
+    <Content Include="chart\static\chart\datatable\js\mCSB_buttons.png" />
+    <Content Include="chart\static\chart\datatable\js\moment.min.js" />
+    <Content Include="chart\static\chart\datatable\js\morris.js" />
+    <Content Include="chart\static\chart\datatable\js\morris.min.js" />
+    <Content Include="chart\static\chart\datatable\js\npm.js" />
+    <Content Include="chart\static\chart\datatable\js\othercharts.js" />
+    <Content Include="chart\static\chart\datatable\js\popper.js" />
+    <Content Include="chart\static\chart\datatable\js\raphael.min.js" />
+    <Content Include="chart\static\chart\datatable\js\scripts.js" />
+    <Content Include="chart\static\chart\datatable\js\scroll-up-bar.min.js" />
+    <Content Include="chart\static\chart\datatable\js\sidemenu.js" />
+    <Content Include="chart\static\chart\datatable\js\tooltip.js" />
+    <Content Include="chart\static\chart\datatable\js\widgets.js" />
+    <Content Include="chart\static\chart\map\img\1.jpg" />
+    <Content Include="chart\static\chart\map\js\bmap.js" />
+    <Content Include="chart\static\chart\map\js\BMapCoordSys.js" />
+    <Content Include="chart\static\chart\map\js\BMapModel.js" />
+    <Content Include="chart\static\chart\map\js\BMapView.js" />
+    <Content Include="chart\static\chart\map\js\dynaData.js" />
+    <Content Include="chart\static\chart\map\js\echarts.js" />
+    <Content Include="chart\static\chart\map\js\jquery-1.7.2.js" />
+    <Content Include="chart\static\chart\map\js\myCharts.js" />
+    <Content Include="chart\static\chart\map\js\myMap.js" />
+    <Content Include="chart\static\chart\map\js\test.js" />
+    <Content Include="chart\static\chart\mychart\css\loading.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="chart\static\chart\mychart\js\echarts.js" />
+    <Content Include="chart\static\chart\mychart\js\jquery-1.7.2.js" />
+    <Content Include="chart\static\chart\mychart\js\loading.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="chart\static\chart\mychart\js\myChart1.js" />
+    <Content Include="chart\static\chart\mychart\js\myChart2.js" />
+    <Content Include="chart\static\chart\mychart\js\myChart3.js" />
+    <Content Include="chart\templates\chart\chart_mychart2.html" />
+    <Content Include="chart\templates\chart\chart_mychart3.html" />
+    <Content Include="chart\templates\chart\chart_mychart1.html" />
+    <Content Include="chart\templates\chart\chart_mymap.html" />
+    <Content Include="chart\templates\chart\head.html" />
+    <Content Include="chart\templates\chart\js.html" />
+    <Content Include="chart\templates\chart\sidetopmenu.html" />
+    <Content Include="datatable\static\datatable\assets\css\icons.css" />
+    <Content Include="datatable\static\datatable\assets\css\style.css" />
+    <Content Include="datatable\static\datatable\assets\img\avatar\avatar-1.jpeg" />
+    <Content Include="datatable\static\datatable\assets\img\avatar\avatar-1.jpeg.jpg" />
+    <Content Include="datatable\static\datatable\assets\img\avatar\avatar-2.jpeg" />
+    <Content Include="datatable\static\datatable\assets\img\avatar\avatar-2.jpeg.jpg" />
+    <Content Include="datatable\static\datatable\assets\img\avatar\avatar-3.jpeg" />
+    <Content Include="datatable\static\datatable\assets\img\avatar\avatar-3.jpeg.jpg" />
+    <Content Include="datatable\static\datatable\assets\img\avatar\avatar-4.jpeg" />
+    <Content Include="datatable\static\datatable\assets\img\avatar\avatar-4.jpeg.jpg" />
+    <Content Include="datatable\static\datatable\assets\img\avatar\avatar-5.jpeg" />
+    <Content Include="datatable\static\datatable\assets\img\avatar\avatar-5.jpeg.jpg" />
+    <Content Include="datatable\static\datatable\assets\img\avatar\avatar-6.jpg" />
+    <Content Include="datatable\static\datatable\assets\img\brand\logo-white.png" />
+    <Content Include="datatable\static\datatable\assets\img\brand\logo.png" />
+    <Content Include="datatable\static\datatable\assets\img\browsers\chrome.png" />
+    <Content Include="datatable\static\datatable\assets\img\browsers\firefox.png" />
+    <Content Include="datatable\static\datatable\assets\img\browsers\internet-explorer.png" />
+    <Content Include="datatable\static\datatable\assets\img\browsers\opera.png" />
+    <Content Include="datatable\static\datatable\assets\img\browsers\safari.png" />
+    <Content Include="datatable\static\datatable\assets\img\favicon.ico" />
+    <Content Include="datatable\static\datatable\assets\img\loader.svg" />
+    <Content Include="datatable\static\datatable\assets\img\news\img01.jpg" />
+    <Content Include="datatable\static\datatable\assets\img\news\img02.jpg" />
+    <Content Include="datatable\static\datatable\assets\img\news\img03.jpg" />
+    <Content Include="datatable\static\datatable\assets\img\news\img04.jpg" />
+    <Content Include="datatable\static\datatable\assets\img\news\img05.jpg" />
+    <Content Include="datatable\static\datatable\assets\img\news\img06.jpg" />
+    <Content Include="datatable\static\datatable\assets\img\news\img07.jpg" />
+    <Content Include="datatable\static\datatable\assets\img\news\img08.jpg" />
+    <Content Include="datatable\static\datatable\assets\img\news\img09.jpg" />
+    <Content Include="datatable\static\datatable\assets\img\news\img10.jpg" />
+    <Content Include="datatable\static\datatable\assets\img\news\img11.jpg" />
+    <Content Include="datatable\static\datatable\assets\img\news\img14.jpg" />
+    <Content Include="datatable\static\datatable\assets\img\products\1.jpg" />
+    <Content Include="datatable\static\datatable\assets\img\products\2.jpg" />
+    <Content Include="datatable\static\datatable\assets\img\products\3.jpg" />
+    <Content Include="datatable\static\datatable\assets\img\products\4.jpg" />
+    <Content Include="datatable\static\datatable\assets\img\products\5.jpg" />
+    <Content Include="datatable\static\datatable\assets\img\products\6.jpg" />
+    <Content Include="datatable\static\datatable\assets\img\products\7.jpg" />
+    <Content Include="datatable\static\datatable\assets\img\products\8.jpg" />
+    <Content Include="datatable\static\datatable\assets\img\products\9.jpg" />
+    <Content Include="datatable\static\datatable\assets\img\spinner.svg" />
+    <Content Include="datatable\static\datatable\assets\img\typing.svg" />
+    <Content Include="datatable\static\datatable\assets\img\weather.jpg" />
+    <Content Include="datatable\static\datatable\assets\js\apexcharts.js" />
+    <Content Include="datatable\static\datatable\assets\js\barcharts.js" />
+    <Content Include="datatable\static\datatable\assets\js\calender.js" />
+    <Content Include="datatable\static\datatable\assets\js\chart.min.js" />
+    <Content Include="datatable\static\datatable\assets\js\chartjs.js" />
+    <Content Include="datatable\static\datatable\assets\js\dashboard.js" />
+    <Content Include="datatable\static\datatable\assets\js\dashboard2.js" />
+    <Content Include="datatable\static\datatable\assets\js\dashboard3.js" />
+    <Content Include="datatable\static\datatable\assets\js\dataclick.js" />
+    <Content Include="datatable\static\datatable\assets\js\echarts.js" />
+    <Content Include="datatable\static\datatable\assets\js\flot.js" />
+    <Content Include="datatable\static\datatable\assets\js\formeditor.js" />
+    <Content Include="datatable\static\datatable\assets\js\forms.js" />
+    <Content Include="datatable\static\datatable\assets\js\gmaps.js" />
+    <Content Include="datatable\static\datatable\assets\js\jquery.googlemap.js" />
+    <Content Include="datatable\static\datatable\assets\js\jquery.min.js" />
+    <Content Include="datatable\static\datatable\assets\js\jquery.ui-sliders.js" />
+    <Content Include="datatable\static\datatable\assets\js\jvectormap.js" />
+    <Content Include="datatable\static\datatable\assets\js\moment.min.js" />
+    <Content Include="datatable\static\datatable\assets\js\morris.js" />
+    <Content Include="datatable\static\datatable\assets\js\othercharts.js" />
+    <Content Include="datatable\static\datatable\assets\js\popper.js" />
+    <Content Include="datatable\static\datatable\assets\js\scripts.js" />
+    <Content Include="datatable\static\datatable\assets\js\tooltip.js" />
+    <Content Include="datatable\static\datatable\assets\js\widgets.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\bootstrap-colorpicker\bootstrap-colorpicker.min.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\bootstrap-colorpicker\bootstrap-colorpicker.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\bootstrap-datepicker\bootstrap-datepicker.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\bootstrap-datepicker\bootstrap-datepicker.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\bootstrap-daterangepicker\daterangepicker.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\bootstrap-daterangepicker\daterangepicker.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\bootstrap-timepicker\bootstrap-timepicker.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\bootstrap-timepicker\bootstrap-timepicker.min.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\bootstrap-wysihtml5\bootstrap3-wysihtml5.min.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\bootstrap\css\bootstrap.min.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\bootstrap\js\bootstrap.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\Chart.js\dist\Chart.bundle.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\chartist\chart.chartist.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\chartist\chartist-plugin-tooltip.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\chartist\chartist-plugin-tooltip.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\chartist\chartist.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\chartist\chartist.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\count-down\jquery.lwtCountdown-1.0.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\Datatable\css\dataTables.bootstrap4.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\Datatable\js\dataTables.bootstrap4.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\Datatable\js\jquery.dataTables.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\echarts\dist\echarts.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\echarts\echarts.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\flot\jquery.flot.fillbetween.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\flot\jquery.flot.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\flot\jquery.flot.pie.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\fullcalendar\calendar.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\fullcalendar\custom_calendar.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\fullcalendar\fullcalendar.min.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\fullcalendar\fullcalendar.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\fullcalendar\fullcalendar.print.min.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\fullcalendar\stylesheet.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\fullcalendar\stylesheet1.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\gallery\main.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\gallery\main.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\all.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\flat\aero%402x.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\flat\aero.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\flat\aero.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\flat\blue%402x.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\flat\blue.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\flat\blue.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\flat\flat%402x.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\flat\flat.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\flat\flat.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\flat\green%402x.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\flat\green.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\flat\green.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\flat\grey%402x.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\flat\grey.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\flat\grey.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\flat\orange%402x.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\flat\orange.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\flat\orange.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\flat\pink%402x.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\flat\pink.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\flat\pink.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\flat\purple%402x.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\flat\purple.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\flat\purple.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\flat\red%402x.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\flat\red.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\flat\red.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\flat\yellow%402x.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\flat\yellow.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\flat\yellow.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\flat\_all.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\futurico\futurico%402x.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\futurico\futurico.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\futurico\futurico.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\icheck.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\line\aero.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\line\blue.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\line\green.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\line\grey.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\line\line%402x.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\line\line.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\line\line.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\line\orange.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\line\pink.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\line\purple.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\line\red.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\line\yellow.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\line\_all.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\minimal\aero%402x.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\minimal\aero.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\minimal\aero.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\minimal\blue%402x.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\minimal\blue.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\minimal\blue.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\minimal\green%402x.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\minimal\green.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\minimal\green.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\minimal\grey%402x.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\minimal\grey.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\minimal\grey.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\minimal\minimal%402x.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\minimal\minimal.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\minimal\minimal.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\minimal\orange%402x.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\minimal\orange.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\minimal\orange.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\minimal\pink%402x.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\minimal\pink.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\minimal\pink.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\minimal\purple%402x.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\minimal\purple.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\minimal\purple.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\minimal\red%402x.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\minimal\red.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\minimal\red.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\minimal\yellow%402x.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\minimal\yellow.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\minimal\yellow.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\minimal\_all.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\polaris\polaris%402x.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\polaris\polaris.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\polaris\polaris.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\square\aero%402x.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\square\aero.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\square\aero.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\square\blue%402x.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\square\blue.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\square\blue.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\square\green%402x.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\square\green.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\square\green.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\square\grey%402x.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\square\grey.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\square\grey.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\square\orange%402x.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\square\orange.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\square\orange.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\square\pink%402x.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\square\pink.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\square\pink.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\square\purple%402x.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\square\purple.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\square\purple.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\square\red%402x.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\square\red.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\square\red.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\square\square%402x.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\square\square.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\square\square.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\square\yellow%402x.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\square\yellow.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\square\yellow.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\iCheck\square\_all.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\feathericons\feather\feather-webfont.eot" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\feathericons\feather\feather-webfont.svg" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\feathericons\feather\feather-webfont.ttf" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\feathericons\feather\feather-webfont.woff" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\feathericons\style.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\font-awesome\css\font-awesome.min.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\Glyphicons\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\Glyphicons\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\Glyphicons\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\Glyphicons\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\Glyphicons\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\Glyphicons\glyphicon.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\ionicons\css\ionicons.min.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\ionicons\fonts\ionicons.eot" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\ionicons\fonts\ionicons.svg" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\ionicons\fonts\ionicons.ttf" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\ionicons\fonts\ionicons.woff" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\Linearicons\fonts\Linearicons-Free.eot" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\Linearicons\fonts\Linearicons-Free.svg" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\Linearicons\fonts\Linearicons-Free.ttf" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\Linearicons\fonts\Linearicons-Free.woff" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\Linearicons\fonts\Linearicons-Free.woff2" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\Linearicons\Linearicons.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\materialdesignicons\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\materialdesignicons\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\materialdesignicons\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\materialdesignicons\fonts\materialdesignicons-webfont.eot" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\materialdesignicons\fonts\materialdesignicons\materialdesignicons-webfont.svg%25EF%25BF%25BDv=2.0.46" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\materialdesignicons\fonts\materialdesignicons\materialdesignicons-webfont.ttf%25EF%25BF%25BDv=2.0.46" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\materialdesignicons\fonts\materialdesignicons\materialdesignicons-webfont.woff%25EF%25BF%25BDv=2.0.46" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\materialdesignicons\materialdesignicons.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\Pe-icon-7-stroke\fonts\Pe-icon-7-stroke.eot" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\Pe-icon-7-stroke\fonts\Pe-icon-7-stroke.svg" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\Pe-icon-7-stroke\fonts\Pe-icon-7-stroke.ttf" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\Pe-icon-7-stroke\fonts\Pe-icon-7-stroke.woff" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\Pe-icon-7-stroke\Pe-icon-7.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\simple-line-icons\fonts\Simple-Line-Icons.eot" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\simple-line-icons\fonts\Simple-Line-Icons.svg" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\simple-line-icons\fonts\Simple-Line-Icons.ttf" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\simple-line-icons\fonts\Simple-Line-Icons.woff" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\simple-line-icons\fonts\Simple-Line-Icons.woff2" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\simple-line-icons\simple-line-icons.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\themify\fonts\themify.eot" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\themify\themify.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\typicons\fonts\typicons.eot" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\typicons\fonts\typicons.svg" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\typicons\fonts\typicons.ttf" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\typicons\fonts\typicons.woff" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\typicons\typicons.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\weathericons\fonts\weathericons-regular-webfont.eot" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\weathericons\fonts\weathericons-regular-webfont.svg" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\weathericons\fonts\weathericons-regular-webfont.ttf" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\weathericons\fonts\weathericons-regular-webfont.woff" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\weathericons\fonts\weathericons-regular-webfont.woff2" />
+    <Content Include="datatable\static\datatable\assets\plugins\iconfonts\weathericons\weathericons.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\images\arrow-left.svg" />
+    <Content Include="datatable\static\datatable\assets\plugins\images\arrow-right.svg" />
+    <Content Include="datatable\static\datatable\assets\plugins\inputmask\jquery.inputmask.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\ion-rangeslider\ion.rangeSlider.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\ion-rangeslider\ion.rangeSlider.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\ion-rangeslider\ion.rangeSlider.skinHTML5.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\jvectormap\gdp-data.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\jvectormap\jquery-jvectormap-2.0.2.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\jvectormap\jquery-jvectormap-2.0.2.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\jvectormap\jquery-jvectormap-au-mill.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\jvectormap\jquery-jvectormap-ca-lcc.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\jvectormap\jquery-jvectormap-uk-mill-en.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\jvectormap\jquery-jvectormap-us-aea-en.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\jvectormap\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\moment\moment.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\morris\morris.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\morris\morris.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\morris\raphael.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\nicescroll\jquery.nicescroll.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\othercharts\jquery.knob.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\othercharts\jquery.sparkline.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\scroll-bar\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\scroll-bar\jquery.mCustomScrollbar.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\scroll-bar\mCSB_buttons.png" />
+    <Content Include="datatable\static\datatable\assets\plugins\scroll-up-bar\dist\scroll-up-bar.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\select2\select2.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\select2\select2.full.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\timeline\timeline.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\timeline\timeline.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\langs\readme.md" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\advlist\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\anchor\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\autolink\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\autoresize\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\autosave\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\bbcode\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\charmap\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\code\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\colorpicker\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\contextmenu\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\directionality\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\emoticons\img\smiley-cool.gif" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\emoticons\img\smiley-cry.gif" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\emoticons\img\smiley-embarassed.gif" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\emoticons\img\smiley-foot-in-mouth.gif" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\emoticons\img\smiley-frown.gif" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\emoticons\img\smiley-innocent.gif" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\emoticons\img\smiley-kiss.gif" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\emoticons\img\smiley-laughing.gif" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\emoticons\img\smiley-money-mouth.gif" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\emoticons\img\smiley-sealed.gif" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\emoticons\img\smiley-smile.gif" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\emoticons\img\smiley-surprised.gif" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\emoticons\img\smiley-tongue-out.gif" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\emoticons\img\smiley-undecided.gif" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\emoticons\img\smiley-wink.gif" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\emoticons\img\smiley-yell.gif" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\emoticons\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\example\dialog.html" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\example\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\example_dependency\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\fullpage\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\fullscreen\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\hr\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\imagetools\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\image\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\importcss\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\insertdatetime\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\layer\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\legacyoutput\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\link\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\lists\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\media\moxieplayer.swf" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\media\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\nonbreaking\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\noneditable\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\pagebreak\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\paste\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\preview\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\print\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\save\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\searchreplace\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\spellchecker\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\tabfocus\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\table\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\template\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\textcolor\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\textpattern\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\visualblocks\css\visualblocks.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\visualblocks\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\visualchars\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\plugins\wordcount\plugin.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\skins\lightgray\content.inline.min.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\skins\lightgray\content.min.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\skins\lightgray\fonts\tinymce-small.eot" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\skins\lightgray\fonts\tinymce-small.svg" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\skins\lightgray\fonts\tinymce-small.ttf" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\skins\lightgray\fonts\tinymce-small.woff" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\skins\lightgray\fonts\tinymce.eot" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\skins\lightgray\fonts\tinymce.svg" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\skins\lightgray\fonts\tinymce.ttf" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\skins\lightgray\fonts\tinymce.woff" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\skins\lightgray\img\anchor.gif" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\skins\lightgray\img\loader.gif" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\skins\lightgray\img\object.gif" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\skins\lightgray\img\trans.gif" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\skins\lightgray\skin.ie7.min.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\skins\lightgray\skin.min.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\themes\modern\theme.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\tinymce\tinymce.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\toaster\garessi-notif.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\toaster\garessi-notif.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\toastr\build\toastr.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\toastr\build\toastr.min.js" />
+    <Content Include="datatable\static\datatable\assets\plugins\toggle-menu\sidemenu.css" />
+    <Content Include="datatable\static\datatable\assets\plugins\toggle-menu\sidemenu.js" />
+    <Content Include="datatable\static\datatable\css\bootstrap-theme.css" />
+    <Content Include="datatable\static\datatable\css\bootstrap-theme.css.map" />
+    <Content Include="datatable\static\datatable\css\bootstrap-theme.min.css" />
+    <Content Include="datatable\static\datatable\css\bootstrap-theme.min.css.map" />
+    <Content Include="datatable\static\datatable\css\bootstrap.css" />
+    <Content Include="datatable\static\datatable\css\bootstrap.css.map" />
+    <Content Include="datatable\static\datatable\css\bootstrap.min.css" />
+    <Content Include="datatable\static\datatable\css\bootstrap.min.css.map" />
+    <Content Include="datatable\static\datatable\css\iconfonts\feathericons\feather\feather-webfont.eot" />
+    <Content Include="datatable\static\datatable\css\iconfonts\feathericons\feather\feather-webfont.svg" />
+    <Content Include="datatable\static\datatable\css\iconfonts\feathericons\feather\feather-webfont.ttf" />
+    <Content Include="datatable\static\datatable\css\iconfonts\feathericons\feather\feather-webfont.woff" />
+    <Content Include="datatable\static\datatable\css\iconfonts\feathericons\style.css" />
+    <Content Include="datatable\static\datatable\css\iconfonts\font-awesome\css\font-awesome.min.css" />
+    <Content Include="datatable\static\datatable\css\iconfonts\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="datatable\static\datatable\css\iconfonts\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="datatable\static\datatable\css\iconfonts\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="datatable\static\datatable\css\iconfonts\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="datatable\static\datatable\css\iconfonts\Glyphicons\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="datatable\static\datatable\css\iconfonts\Glyphicons\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="datatable\static\datatable\css\iconfonts\Glyphicons\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="datatable\static\datatable\css\iconfonts\Glyphicons\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="datatable\static\datatable\css\iconfonts\Glyphicons\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="datatable\static\datatable\css\iconfonts\Glyphicons\glyphicon.css" />
+    <Content Include="datatable\static\datatable\css\iconfonts\ionicons\css\ionicons.min.css" />
+    <Content Include="datatable\static\datatable\css\iconfonts\ionicons\fonts\ionicons.eot" />
+    <Content Include="datatable\static\datatable\css\iconfonts\ionicons\fonts\ionicons.svg" />
+    <Content Include="datatable\static\datatable\css\iconfonts\ionicons\fonts\ionicons.ttf" />
+    <Content Include="datatable\static\datatable\css\iconfonts\ionicons\fonts\ionicons.woff" />
+    <Content Include="datatable\static\datatable\css\iconfonts\Linearicons\fonts\Linearicons-Free.eot" />
+    <Content Include="datatable\static\datatable\css\iconfonts\Linearicons\fonts\Linearicons-Free.svg" />
+    <Content Include="datatable\static\datatable\css\iconfonts\Linearicons\fonts\Linearicons-Free.ttf" />
+    <Content Include="datatable\static\datatable\css\iconfonts\Linearicons\fonts\Linearicons-Free.woff" />
+    <Content Include="datatable\static\datatable\css\iconfonts\Linearicons\fonts\Linearicons-Free.woff2" />
+    <Content Include="datatable\static\datatable\css\iconfonts\Linearicons\Linearicons.css" />
+    <Content Include="datatable\static\datatable\css\iconfonts\materialdesignicons\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="datatable\static\datatable\css\iconfonts\materialdesignicons\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="datatable\static\datatable\css\iconfonts\materialdesignicons\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="datatable\static\datatable\css\iconfonts\materialdesignicons\fonts\materialdesignicons-webfont.eot" />
+    <Content Include="datatable\static\datatable\css\iconfonts\materialdesignicons\fonts\materialdesignicons\materialdesignicons-webfont.svg%25EF%25BF%25BD_2.0.46" />
+    <Content Include="datatable\static\datatable\css\iconfonts\materialdesignicons\fonts\materialdesignicons\materialdesignicons-webfont.ttf%25EF%25BF%25BD_2.0.46" />
+    <Content Include="datatable\static\datatable\css\iconfonts\materialdesignicons\fonts\materialdesignicons\materialdesignicons-webfont.woff%25EF%25BF%25BD_2.0.46" />
+    <Content Include="datatable\static\datatable\css\iconfonts\materialdesignicons\materialdesignicons.css" />
+    <Content Include="datatable\static\datatable\css\iconfonts\Pe-icon-7-stroke\fonts\Pe-icon-7-stroke.eot" />
+    <Content Include="datatable\static\datatable\css\iconfonts\Pe-icon-7-stroke\fonts\Pe-icon-7-stroke.svg" />
+    <Content Include="datatable\static\datatable\css\iconfonts\Pe-icon-7-stroke\fonts\Pe-icon-7-stroke.ttf" />
+    <Content Include="datatable\static\datatable\css\iconfonts\Pe-icon-7-stroke\fonts\Pe-icon-7-stroke.woff" />
+    <Content Include="datatable\static\datatable\css\iconfonts\Pe-icon-7-stroke\Pe-icon-7.css" />
+    <Content Include="datatable\static\datatable\css\iconfonts\simple-line-icons\fonts\Simple-Line-Icons.eot" />
+    <Content Include="datatable\static\datatable\css\iconfonts\simple-line-icons\fonts\Simple-Line-Icons.svg" />
+    <Content Include="datatable\static\datatable\css\iconfonts\simple-line-icons\fonts\Simple-Line-Icons.ttf" />
+    <Content Include="datatable\static\datatable\css\iconfonts\simple-line-icons\fonts\Simple-Line-Icons.woff" />
+    <Content Include="datatable\static\datatable\css\iconfonts\simple-line-icons\fonts\Simple-Line-Icons.woff2" />
+    <Content Include="datatable\static\datatable\css\iconfonts\simple-line-icons\simple-line-icons.css" />
+    <Content Include="datatable\static\datatable\css\iconfonts\themify\fonts\themify.eot" />
+    <Content Include="datatable\static\datatable\css\iconfonts\themify\themify.css" />
+    <Content Include="datatable\static\datatable\css\iconfonts\typicons\fonts\typicons.eot" />
+    <Content Include="datatable\static\datatable\css\iconfonts\typicons\fonts\typicons.svg" />
+    <Content Include="datatable\static\datatable\css\iconfonts\typicons\fonts\typicons.ttf" />
+    <Content Include="datatable\static\datatable\css\iconfonts\typicons\fonts\typicons.woff" />
+    <Content Include="datatable\static\datatable\css\iconfonts\typicons\typicons.css" />
+    <Content Include="datatable\static\datatable\css\iconfonts\weathericons\fonts\weathericons-regular-webfont.eot" />
+    <Content Include="datatable\static\datatable\css\iconfonts\weathericons\fonts\weathericons-regular-webfont.svg" />
+    <Content Include="datatable\static\datatable\css\iconfonts\weathericons\fonts\weathericons-regular-webfont.ttf" />
+    <Content Include="datatable\static\datatable\css\iconfonts\weathericons\fonts\weathericons-regular-webfont.woff" />
+    <Content Include="datatable\static\datatable\css\iconfonts\weathericons\fonts\weathericons-regular-webfont.woff2" />
+    <Content Include="datatable\static\datatable\css\iconfonts\weathericons\weathericons.css" />
+    <Content Include="datatable\static\datatable\css\icons.css" />
+    <Content Include="datatable\static\datatable\css\morris.css" />
+    <Content Include="datatable\static\datatable\css\sidemenu.css" />
+    <Content Include="datatable\static\datatable\css\style.css" />
+    <Content Include="datatable\static\datatable\js\apexcharts.js" />
+    <Content Include="datatable\static\datatable\js\barcharts.js" />
+    <Content Include="datatable\static\datatable\js\bootstrap.js" />
+    <Content Include="datatable\static\datatable\js\bootstrap.min.js" />
+    <Content Include="datatable\static\datatable\js\calender.js" />
+    <Content Include="datatable\static\datatable\js\chart.min.js" />
+    <Content Include="datatable\static\datatable\js\chartjs.js" />
+    <Content Include="datatable\static\datatable\js\dashboard.js" />
+    <Content Include="datatable\static\datatable\js\dashboard2.js" />
+    <Content Include="datatable\static\datatable\js\dashboard3.js" />
+    <Content Include="datatable\static\datatable\js\dataclick.js" />
+    <Content Include="datatable\static\datatable\js\echarts.js" />
+    <Content Include="datatable\static\datatable\js\flot.js" />
+    <Content Include="datatable\static\datatable\js\formeditor.js" />
+    <Content Include="datatable\static\datatable\js\forms.js" />
+    <Content Include="datatable\static\datatable\js\gmaps.js" />
+    <Content Include="datatable\static\datatable\js\jquery.googlemap.js" />
+    <Content Include="datatable\static\datatable\js\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="datatable\static\datatable\js\jquery.mCustomScrollbar.css" />
+    <Content Include="datatable\static\datatable\js\jquery.min.js" />
+    <Content Include="datatable\static\datatable\js\jquery.nicescroll.min.js" />
+    <Content Include="datatable\static\datatable\js\jquery.ui-sliders.js" />
+    <Content Include="datatable\static\datatable\js\jvectormap.js" />
+    <Content Include="datatable\static\datatable\js\mCSB_buttons.png" />
+    <Content Include="datatable\static\datatable\js\moment.min.js" />
+    <Content Include="datatable\static\datatable\js\morris.js" />
+    <Content Include="datatable\static\datatable\js\morris.min.js" />
+    <Content Include="datatable\static\datatable\js\myslideup.js" />
+    <Content Include="datatable\static\datatable\js\npm.js" />
+    <Content Include="datatable\static\datatable\js\othercharts.js" />
+    <Content Include="datatable\static\datatable\js\popper.js" />
+    <Content Include="datatable\static\datatable\js\raphael.min.js" />
+    <Content Include="datatable\static\datatable\js\scripts.js" />
+    <Content Include="datatable\static\datatable\js\scroll-up-bar.min.js" />
+    <Content Include="datatable\static\datatable\js\sidemenu.js" />
+    <Content Include="datatable\static\datatable\js\tooltip.js" />
+    <Content Include="datatable\static\datatable\js\widgets.js" />
+    <Content Include="datatable\templates\404.html" />
+    <Content Include="datatable\templates\datatable\dataalert.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="datatable\templates\datatable\datatable.html" />
+    <Content Include="datatable\templates\datatable\databack.html" />
+    <Content Include="datatable\templates\datatable\datainput.html" />
+    <Content Include="datatable\templates\datatable\datauser.html" />
+    <Content Include="datatable\templates\datatable\dataupdate.html" />
+    <Content Include="datatable\templates\datatable\head.html" />
+    <Content Include="datatable\templates\datatable\js.html" />
+    <Content Include="datatable\templates\datatable\list.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="datatable\templates\datatable\side.html" />
+    <Content Include="datatable\templates\datatable\top.html" />
+    <Content Include="datatable\templates\datatable\adminuser.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="login\static\login\css\style.css" />
+    <Content Include="login\static\login\js\jquery.min.js" />
+    <Content Include="login\static\login\js\logincode.js" />
+    <Content Include="login\static\login\js\vector.js" />
+    <Content Include="login\templates\login\changepsw.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="login\templates\login\head.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="login\templates\login\js.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="login\templates\login\adminlogin.html" />
+    <Content Include="login\templates\login\login.html" />
+    <Content Include="login\templates\login\register.html" />
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="chart\" />
+    <Folder Include="chart\migrations\" />
+    <Folder Include="chart\static\" />
+    <Folder Include="chart\static\chart\" />
+    <Folder Include="chart\static\chart\datatable\" />
+    <Folder Include="chart\static\chart\datatable\css\" />
+    <Folder Include="chart\static\chart\datatable\css\iconfonts\" />
+    <Folder Include="chart\static\chart\datatable\css\iconfonts\feathericons\" />
+    <Folder Include="chart\static\chart\datatable\css\iconfonts\feathericons\feather\" />
+    <Folder Include="chart\static\chart\datatable\css\iconfonts\font-awesome\" />
+    <Folder Include="chart\static\chart\datatable\css\iconfonts\font-awesome\css\" />
+    <Folder Include="chart\static\chart\datatable\css\iconfonts\font-awesome\fonts\" />
+    <Folder Include="chart\static\chart\datatable\css\iconfonts\Glyphicons\" />
+    <Folder Include="chart\static\chart\datatable\css\iconfonts\Glyphicons\fonts\" />
+    <Folder Include="chart\static\chart\datatable\css\iconfonts\ionicons\" />
+    <Folder Include="chart\static\chart\datatable\css\iconfonts\ionicons\css\" />
+    <Folder Include="chart\static\chart\datatable\css\iconfonts\ionicons\fonts\" />
+    <Folder Include="chart\static\chart\datatable\css\iconfonts\Linearicons\" />
+    <Folder Include="chart\static\chart\datatable\css\iconfonts\Linearicons\fonts\" />
+    <Folder Include="chart\static\chart\datatable\css\iconfonts\materialdesignicons\" />
+    <Folder Include="chart\static\chart\datatable\css\iconfonts\materialdesignicons\fonts\" />
+    <Folder Include="chart\static\chart\datatable\css\iconfonts\materialdesignicons\fonts\materialdesignicons\" />
+    <Folder Include="chart\static\chart\datatable\css\iconfonts\Pe-icon-7-stroke\" />
+    <Folder Include="chart\static\chart\datatable\css\iconfonts\Pe-icon-7-stroke\fonts\" />
+    <Folder Include="chart\static\chart\datatable\css\iconfonts\simple-line-icons\" />
+    <Folder Include="chart\static\chart\datatable\css\iconfonts\simple-line-icons\fonts\" />
+    <Folder Include="chart\static\chart\datatable\css\iconfonts\themify\" />
+    <Folder Include="chart\static\chart\datatable\css\iconfonts\themify\fonts\" />
+    <Folder Include="chart\static\chart\datatable\css\iconfonts\typicons\" />
+    <Folder Include="chart\static\chart\datatable\css\iconfonts\typicons\fonts\" />
+    <Folder Include="chart\static\chart\datatable\css\iconfonts\weathericons\" />
+    <Folder Include="chart\static\chart\datatable\css\iconfonts\weathericons\fonts\" />
+    <Folder Include="chart\static\chart\datatable\img\" />
+    <Folder Include="chart\static\chart\datatable\js\" />
+    <Folder Include="chart\static\chart\map\" />
+    <Folder Include="chart\static\chart\map\img\" />
+    <Folder Include="chart\static\chart\map\js\" />
+    <Folder Include="chart\static\chart\mychart\" />
+    <Folder Include="chart\static\chart\mychart\js\" />
+    <Folder Include="chart\static\chart\mychart\css\" />
+    <Folder Include="chart\templates\" />
+    <Folder Include="chart\templates\chart\" />
+    <Folder Include="datatable\" />
+    <Folder Include="datatable\migrations\" />
+    <Folder Include="datatable\static\" />
+    <Folder Include="datatable\static\datatable\" />
+    <Folder Include="datatable\static\datatable\assets\" />
+    <Folder Include="datatable\static\datatable\assets\css\" />
+    <Folder Include="datatable\static\datatable\assets\img\" />
+    <Folder Include="datatable\static\datatable\assets\img\avatar\" />
+    <Folder Include="datatable\static\datatable\assets\img\brand\" />
+    <Folder Include="datatable\static\datatable\assets\img\browsers\" />
+    <Folder Include="datatable\static\datatable\assets\img\news\" />
+    <Folder Include="datatable\static\datatable\assets\img\products\" />
+    <Folder Include="datatable\static\datatable\assets\js\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\bootstrap-colorpicker\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\bootstrap-datepicker\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\bootstrap-daterangepicker\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\bootstrap-timepicker\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\bootstrap-wysihtml5\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\bootstrap\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\bootstrap\css\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\bootstrap\js\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\Chart.js\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\Chart.js\dist\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\chartist\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\count-down\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\Datatable\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\Datatable\css\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\Datatable\js\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\echarts\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\echarts\dist\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\flot\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\fullcalendar\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\gallery\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\iCheck\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\iCheck\flat\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\iCheck\futurico\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\iCheck\line\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\iCheck\minimal\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\iCheck\polaris\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\iCheck\square\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\iconfonts\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\iconfonts\feathericons\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\iconfonts\feathericons\feather\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\iconfonts\font-awesome\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\iconfonts\font-awesome\css\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\iconfonts\font-awesome\fonts\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\iconfonts\Glyphicons\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\iconfonts\Glyphicons\fonts\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\iconfonts\ionicons\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\iconfonts\ionicons\css\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\iconfonts\ionicons\fonts\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\iconfonts\Linearicons\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\iconfonts\Linearicons\fonts\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\iconfonts\materialdesignicons\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\iconfonts\materialdesignicons\fonts\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\iconfonts\materialdesignicons\fonts\materialdesignicons\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\iconfonts\Pe-icon-7-stroke\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\iconfonts\Pe-icon-7-stroke\fonts\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\iconfonts\simple-line-icons\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\iconfonts\simple-line-icons\fonts\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\iconfonts\themify\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\iconfonts\themify\fonts\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\iconfonts\typicons\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\iconfonts\typicons\fonts\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\iconfonts\weathericons\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\iconfonts\weathericons\fonts\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\images\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\inputmask\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\ion-rangeslider\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\jvectormap\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\moment\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\morris\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\nicescroll\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\othercharts\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\scroll-bar\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\scroll-up-bar\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\scroll-up-bar\dist\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\select2\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\timeline\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\langs\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\advlist\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\anchor\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\autolink\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\autoresize\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\autosave\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\bbcode\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\charmap\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\code\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\colorpicker\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\contextmenu\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\directionality\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\emoticons\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\emoticons\img\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\example\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\example_dependency\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\fullpage\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\fullscreen\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\hr\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\imagetools\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\image\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\importcss\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\insertdatetime\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\layer\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\legacyoutput\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\link\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\lists\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\media\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\nonbreaking\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\noneditable\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\pagebreak\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\paste\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\preview\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\print\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\save\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\searchreplace\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\spellchecker\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\tabfocus\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\table\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\template\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\textcolor\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\textpattern\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\visualblocks\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\visualblocks\css\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\visualchars\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\plugins\wordcount\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\skins\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\skins\lightgray\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\skins\lightgray\fonts\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\skins\lightgray\img\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\themes\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\tinymce\themes\modern\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\toaster\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\toastr\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\toastr\build\" />
+    <Folder Include="datatable\static\datatable\assets\plugins\toggle-menu\" />
+    <Folder Include="datatable\static\datatable\css\" />
+    <Folder Include="datatable\static\datatable\css\iconfonts\" />
+    <Folder Include="datatable\static\datatable\css\iconfonts\feathericons\" />
+    <Folder Include="datatable\static\datatable\css\iconfonts\feathericons\feather\" />
+    <Folder Include="datatable\static\datatable\css\iconfonts\font-awesome\" />
+    <Folder Include="datatable\static\datatable\css\iconfonts\font-awesome\css\" />
+    <Folder Include="datatable\static\datatable\css\iconfonts\font-awesome\fonts\" />
+    <Folder Include="datatable\static\datatable\css\iconfonts\Glyphicons\" />
+    <Folder Include="datatable\static\datatable\css\iconfonts\Glyphicons\fonts\" />
+    <Folder Include="datatable\static\datatable\css\iconfonts\ionicons\" />
+    <Folder Include="datatable\static\datatable\css\iconfonts\ionicons\css\" />
+    <Folder Include="datatable\static\datatable\css\iconfonts\ionicons\fonts\" />
+    <Folder Include="datatable\static\datatable\css\iconfonts\Linearicons\" />
+    <Folder Include="datatable\static\datatable\css\iconfonts\Linearicons\fonts\" />
+    <Folder Include="datatable\static\datatable\css\iconfonts\materialdesignicons\" />
+    <Folder Include="datatable\static\datatable\css\iconfonts\materialdesignicons\fonts\" />
+    <Folder Include="datatable\static\datatable\css\iconfonts\materialdesignicons\fonts\materialdesignicons\" />
+    <Folder Include="datatable\static\datatable\css\iconfonts\Pe-icon-7-stroke\" />
+    <Folder Include="datatable\static\datatable\css\iconfonts\Pe-icon-7-stroke\fonts\" />
+    <Folder Include="datatable\static\datatable\css\iconfonts\simple-line-icons\" />
+    <Folder Include="datatable\static\datatable\css\iconfonts\simple-line-icons\fonts\" />
+    <Folder Include="datatable\static\datatable\css\iconfonts\themify\" />
+    <Folder Include="datatable\static\datatable\css\iconfonts\themify\fonts\" />
+    <Folder Include="datatable\static\datatable\css\iconfonts\typicons\" />
+    <Folder Include="datatable\static\datatable\css\iconfonts\typicons\fonts\" />
+    <Folder Include="datatable\static\datatable\css\iconfonts\weathericons\" />
+    <Folder Include="datatable\static\datatable\css\iconfonts\weathericons\fonts\" />
+    <Folder Include="datatable\static\datatable\img\" />
+    <Folder Include="datatable\static\datatable\js\" />
+    <Folder Include="datatable\templates\" />
+    <Folder Include="datatable\templates\datatable\" />
+    <Folder Include="login\" />
+    <Folder Include="login\migrations\" />
+    <Folder Include="login\static\" />
+    <Folder Include="login\static\login\" />
+    <Folder Include="login\static\login\css\" />
+    <Folder Include="login\static\login\js\" />
+    <Folder Include="login\templates\" />
+    <Folder Include="login\templates\login\" />
+    <Folder Include="oursite\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>env</Id>
+      <Version>3.7</Version>
+      <Description>env (Python 3.7 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

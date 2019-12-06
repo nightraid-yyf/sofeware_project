@@ -1,0 +1,107 @@
+{% load staticfiles %}
+{% include 'datatable/head.html' %}
+<body class="app">
+	{% include 'datatable/top.html' %}
+    <div class="app-content">
+        <section class="section">
+            <marquee width="260px" height="28px" bgcolor="#87CEEB" behavior="scroll" loop="-1" scrollamount="4px" direction="left" onMouseOver="this.stop()" onMouseOut="this.start()" style="margin-top:-20px; margin-left:84%;border-radius:10%">
+                {{ alertmsg|safe }}
+            </marquee>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">个人中心:<span style="color:gray">您好！用户名</span></li>
+                <li></li>
+                <li class="breadcrumb-item active"><a href="/chart_mymap">返回主界面</a></li>
+            </ol>
+        </section>
+        <section class="section">
+            <div class="row">
+                <div class="card" style="margin-left:15px;">
+                    <div class="card-body">
+                        <div class="circle_picture">
+                            <img src={{imgpath}} style="height:200px;width:200px"/>
+                        </div>
+                        <div style="font-size: 25px; font: 18px/20px '黑体', Tahoma, Verdana, sans-serif;margin-left:10px">
+                            <br></br>
+                            <br></br>
+                            <ul>
+                                <div class="row" id="recorrect_lastlayer">
+                                    <li id="recorrect"><span style="color:blue">用户名：</span><span style="color:gray">{{username}}</span></li>
+                                </div>
+                                <br></br>
+                                <div class="row" id="recorrect_lastlayer">
+                                    <li><span style="color:blue">用户权限：</span><span style="color:gray">xx级</span></li>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card" style="margin-left:50px;margin-top:30px;background:-webkit-linear-gradient(top,#e8d90c,#fec401,#ffa302);width:205px;height:230px;">
+                        <div class="user_imgs">
+                            <img src="{% static 'datatable/img/邮箱.png' %}" style="height:200px;width:200px;text-align:center"></img>
+                        </div>
+                        <p style="font-size:110%;margin-top:85px ;margin-left:15px"><span style="color:blue">已绑定：</span><span style="color:gray">HITSZ@sina.com</span></p>
+                    </div>
+                    <div class="card" style="margin-left:35px;margin-top:30px;background:-webkit-linear-gradient(top,#2cd4ff,#48e744);width:205px;height:230px;">
+                        <div class="user_imgs">
+                            <img src="{% static 'datatable/img/phone.png' %}" style="height:196px;width:196px;text-align:center"></img>
+                        </div>
+                        <p style="font-size:110%;margin-top:85px ;margin-left:15px"><span style="color:blue">已绑定：</span><span style="color:gray">181****5545</span></p>
+                    </div>
+                    <div class="card" style="margin-left:35px;margin-top:30px;background:white;width:205px;height:230px;">
+                        <div class="user_imgs">
+                            <img src="{% static 'datatable/img/qq.jpg' %}" style="margin-top:15px;height:150px;width:200px;text-align:center"></img>
+                        </div>
+                        <p style="font-size:110%;margin-top:85px ;margin-left:15px"><span style="color:blue">已绑定：&nbsp</span><span style="color:gray">10****4423</span></p>
+                    </div>
+                    <div class="card" style="margin-left:35px;margin-top:30px;background:-webkit-linear-gradient(top,#ffe9a6,#ffd541);width:205px;height:230px;">
+                        <div class="user_imgs">
+                            <img src="{% static 'datatable/img/微博.png' %}" style="margin-top:-20px;margin-left:6px;height:250px;width:200px;text-align:center"/>
+                        </div>
+                        <p style="font-size:110%;margin-top:85px ;margin-left:15px"><span style="color:blue">已绑定：</span><span style="color:gray">请输入微博用户账号</span></p>
+                    </div>
+                </div>
+                <div style="margin-left:300px;margin-top:-150px;width:68%">
+                    <div class="card" style="margin-left:15px;">
+                        <div class="card-body">
+                            <div class="row">
+                                <p style="color:purple;margin-top:3px;font-size:120%;font: 18px/20px '黑体', Tahoma, Verdana, sans-serif;font-weight:bold;">页面主题设置</p>
+                                <span>
+                                    <a href="#"><img class="img_show" src="{% static 'datatable/img/grey.png' %}" style="height:25px;width:25px" onclick="set_color('grey')" /></a>
+                                    <a href="#"><img class="img_show" src="{% static 'datatable/img/orange.png' %}" style="height:25px;width:25px" onclick="set_color('orange')"/></a>
+                                    <a href="#"><img class="img_show" src="{% static 'datatable/img/green.png' %}" style="height:25px;width:25px" onclick="set_color('green')"/></a>
+                                    <a href="#"><img class="img_show" src="{% static 'datatable/img/blue.png' %}" style="height:25px;width:25px" onclick="set_color('blue')"/></a>
+                                </span>
+                                <br />
+                                <p style="color:purple;margin-top:3px;font-size:120%;font: 18px/20px '黑体', Tahoma, Verdana, sans-serif;font-weight:bold;">当前主题</p>
+                                <span>
+                                    <img class="img_show" id="nowcolor" src={{maincolor_img}} style="height:25px;width:25px">
+                                </span>
+                            </div>
+                            <div style="font-size: 25px; font: 18px/20px '黑体', Tahoma, Verdana, sans-serif;margin-left:10px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+<script>
+    function set_color(color) {
+        $.ajax({
+            url: "datauser",
+            type: "POST",
+            data: {
+                "color": color, "csrfmiddlewaretoken": '{{csrf_token}}' },
+            success: function () {
+                    alert("修改成功");
+                    var img=document.getElementById("nowcolor");
+                    var path="/static/datatable/img/"+color+".png"
+                    img.src=path;
+            }
+        })
+    }
+</script>
+{% include 'datatable/js.html' %}

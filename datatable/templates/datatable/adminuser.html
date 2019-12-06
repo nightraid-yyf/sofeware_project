@@ -1,0 +1,131 @@
+{% load staticfiles %}
+{% include 'datatable/head.html' %}
+<body class="app">
+	<div class="app-content">
+		<ol class="breadcrumb">
+				<li class="breadcrumb-item">用户管理</li>
+                <li class="breadcrumb-item" href="logout"><a href="logout">退出登录</a></li>
+		</ol>
+	<section>
+		<div class="row" >
+			<div class="card"  style="margin-left:5%;margin-top:-2%;height:70%;width:90%;overflow:auto;scroll-behavior:smooth">
+				<div class="card-body" >
+                    {% if data %}
+                    {% for member in data %}
+                        <div class="row" style="margin-left:5%;font-size:120%;">
+                        {% if member.type == 0 %}
+						    <div style="height:10%;width:80%" class="alert alert-danger" role="alert"><span style=" margin-right:15px">{{member.username}}</span>
+							<span style=" margin-right:15px">未审核</span>
+                        {% elif member.type == 1 %}
+                            <div style="height:10%;width:80%" class="alert alert-success" role="alert"><span style=" margin-right:15px">{{member.username}}</span>
+                            <span style=" margin-right:15px">已审核</span>
+                        {% endif %}
+                            
+						</div>
+						<div class="btn-group" style="margin-left:5%;">
+							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="height:8%">
+								操作
+							</button>
+                            
+                            <ul class="dropdown-menu">
+                                    {% if member.type == 0 %}
+                                    <li><a href="#" name={{member.id}} onclick="pass_event(this)">通过</a></li>
+                                    <li><a href="#" name={{member.id}} onclick="delete_event(this)">忽略</a></li>
+                                    {% elif member.type == 1 %}
+                                    <li><a href="#" name={{member.id}} onclick="delete_event(this)">删除</a></li>
+                                    <li><a href="#" name={{member.id}} onclick="changepsw_event(this)">修改密码</a></li>
+                                    <li><a href="#" name={{member.id}} onclick="changeusername_event(this)">修改用户名</a></li>
+                                    {% endif %}
+                            </ul>
+                            
+						</div>
+					    </div>
+                    {% endfor %}
+                    {% endif %}
+				</div>
+			</div>
+		</div>
+	</section>
+	</div>
+</body>
+
+
+<script>
+    function pass_event(e) {
+         $.ajax({
+            url: "adminuser",
+            type: "POST",
+            data: {
+                "event": "pass", "csrfmiddlewaretoken": '{{csrf_token}}',"id":e.name },
+            success: function () {
+                    alert("处理成功");
+                    location.reload();
+            }
+        })
+    }    
+    function changepsw_event(e) {
+        var psw;
+        var len;
+        var flag=1;
+        while(flag){
+            psw=prompt("请输入密码!");
+            len=psw.length;
+            if (len<6){
+                alert("密码长度需大于6位");
+                continue;
+            }
+            if ((psw.search(/[a-z]/)<0&&psw.search(/[A-Z]/)<0)||psw.search(/[0-9]/)<0){
+                alert("密码需包含数字和英文字母");
+                continue;
+            }
+            flag=0;
+         }
+         $.ajax({
+            url: "adminuser",
+            type: "POST",
+            data: {
+                "event": "changepsw", "csrfmiddlewaretoken": '{{csrf_token}}',"id":e.name ,"psw":psw},
+            success: function () {
+                    alert("处理成功");
+                    location.reload();
+            }
+        })
+    }
+    function changeusername_event(e) {
+        var name;
+        var len;
+        var flag=1;
+        while(flag){
+            name=prompt("请输入用户名!");
+            len=name.length;
+            if (len=0){
+                alert("用户名不能为空");
+                continue;
+            }
+            flag=0;
+         }
+         $.ajax({
+            url: "adminuser",
+            type: "POST",
+            data: {
+                "event": "changeusername", "csrfmiddlewaretoken": '{{csrf_token}}',"id":e.name,"name":name },
+            success: function () {
+                    alert("处理成功");
+                    location.reload();
+            }
+        })
+    }  
+    function delete_event(e) {
+         $.ajax({
+            url: "adminuser",
+            type: "POST",
+            data: {
+                "event": "delete", "csrfmiddlewaretoken": '{{csrf_token}}',"id":e.name },
+            success: function () {
+                    alert("处理成功");
+                    location.reload();
+            }
+        })
+    }
+</script>
+{% include 'datatable/js.html' %}

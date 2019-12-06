@@ -1,0 +1,80 @@
+﻿{% load staticfiles %}
+<head>
+	 {% include 'chart/head.html' %}
+</head>
+<body class="app" style="overflow-y:hidden">
+    
+	{% include 'chart/sidetopmenu.html' %}
+	<div class="app-content" style="padding:0px;margin-top:60px">
+            {% if lv == 1 %}
+            <marquee width="100%" height="3%" bgcolor="#87CEEB" behavior="scroll" loop="-1" scrollamount="5%" direction="left" onMouseOver="this.stop()"onMouseOut="this.start()">
+            <div style="margin-top:0.35%">
+            {{ alertmsg|safe }}
+            </div>
+            </marquee>
+            <div id="mychart1" style="width: 100%; height:90.1%;" ></div>
+            {% else %}
+            <div id="mychart1" style="width: 100%; height:93.5%;" ></div>
+            {% endif %}
+	        <script src="{% static 'chart/mychart/js/myChart1.js' %}" type="text/javascript"></script>
+	</div>
+    <div id="testchart" class="dropdown-menu dropdown-list dropdown-menu-righ" style="position:absolute;left:50%;top:50%;margin:-100px 0 0 -150px;display:none;z-index:99;">
+            <div class="dropdown-header" style="text-align:center">
+					数据时间设置
+			</div>
+            <div class="dropdown-item" style="text-align:center">
+                <span>
+                    <button onclick="day_show()">按日期选择</button>
+                    <button onclick="month_show()">按月选择</button>
+                    <button onclick="envious_show()">按季度选择</button>
+                </span>
+            </div>
+            <div  id="day_form" style="display:none">
+                <form class="dropdown-list-content" action="" method="POST" >
+                {% csrf_token %}
+                    <a class="dropdown-item" style="text-align:center">开始时间:<input type="date" class="dropdown-item" value="{{start_time}}" style="width:80%" name="start_time"/></a>
+                    <a class="dropdown-item" style="text-align:center">结束时间:<input type="date" class="dropdown-item" value="{{end_time}}" style="width:80%" name="end_time"/></a>
+                    <div class="dropdown-item" style="text-align:center"><button type="submit" name="submit_btn" value="day">提交</button><button type="submit" name="reset_but" value="reset">重置</button></div>
+                </form>
+            </div>
+            <div id="month_form" style="display:none">
+                <form class="dropdown-list-content"  action="" method="POST" >
+                {% csrf_token %}
+                    <a class="dropdown-item" style="text-align:center">开始日期，查看一个月:<input type="date" class="dropdown-item" value="{{start_time}}" style="width:80%" name="start_time"/></a>
+                    <div class="dropdown-item" style="text-align:center"><button type="submit" name="submit_btn" value="month">提交</button><button type="submit" name="reset_but" value="reset">重置</button></div>
+                </form>
+            </div>
+            <div id="envious_form" style="display:none">
+                <form class="dropdown-list-content"  action="" method="POST" >
+                {% csrf_token %}
+                    <a class="dropdown-item" style="text-align:center">开始日期，查看一季度<input type="date" class="dropdown-item" value="{{start_time}}" style="width:80%" name="start_time"/></a>
+                    <div class="dropdown-item" style="text-align:center"><button type="submit" name="submit_btn" value="envious">提交</button><button type="submit" name="reset_but" value="reset">重置</button></div>
+                </form>
+            </div> 
+    </div>   
+
+         
+</body>
+
+<script>
+    function day_show() {
+        document.getElementById("day_form").style.display = "block";
+        document.getElementById("month_form").style.display = "none";
+        document.getElementById("envious_form").style.display = "none";
+
+    }
+    function month_show() {
+        document.getElementById("day_form").style.display = "none";
+        document.getElementById("month_form").style.display = "block";
+        document.getElementById("envious_form").style.display = "none";
+    }
+    function envious_show() {
+        document.getElementById("day_form").style.display = "none";
+        document.getElementById("month_form").style.display = "none";
+        document.getElementById("envious_form").style.display = "block";
+    }
+</script>
+
+
+{% include 'chart/js.html' %}
+

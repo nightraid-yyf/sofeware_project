@@ -1,0 +1,88 @@
+{% load staticfiles %}
+{% include 'datatable/head.html' %}
+<body class="app">
+    {% include 'datatable/top.html' %}
+	{% include 'datatable/side.html' %}
+	<div class="app-content">
+		<ol class="breadcrumb">
+				<li class="breadcrumb-item">报警数据</li>
+		</ol>
+	<section>
+		<div class="row" >
+			<div class="card"  style="margin-left:5%;margin-top:-2%;height:70%;width:90%;overflow:auto;scroll-behavior:smooth">
+				<div class="card-body" >
+                    {% if data %}
+                    {% for member in data %}
+                        <div class="row" style="margin-left:5%;font-size:120%;">
+                        {% if member.type == 0 %}
+						<div style="height:10%;width:80%" class="alert alert-danger" role="alert"><span style=" margin-right:15px">{{member.community}}</span><span style=" margin-right:15px">{{member.time}}</span><span style="margin-right:15px;font-weight:bold" >{{member.event}}</span>
+							
+								<span style=" margin-right:15px">已经延期{{member.delay}}</span>
+                            {% elif member.type == 1 %}
+                            <div style="height:10%;width:80%" class="alert alert-success" role="alert"><span style=" margin-right:15px">{{member.community}}</span><span style=" margin-right:15px">{{member.time}}</span><span style="margin-right:15px;font-weight:bold" >{{member.event}}</span>
+                            <span style=" margin-right:15px">处置中{{member.delay}}</span>
+                            {% endif %}
+                            
+						</div>
+						<div class="btn-group" style="margin-left:5%;">
+							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="height:8%">
+								操作
+							</button>
+							<ul class="dropdown-menu">
+                                {% if member.type == 0 %}
+								<li><a href="#"  name={{member.id}} onclick="deal_event(this)">已解决</a></li>
+                                {% elif member.type == 1 %}
+                                <li><a href="#"  name={{member.id}} onclick="over_event(this)">已解决</a></li>
+                                <li><a href="#"  name={{member.id}} onclick="timeout_event(this)">已超时</a></li>
+                                {% endif %}
+
+							</ul>
+						</div>
+					    </div>
+                    {% endfor %}
+                    {% endif %}
+				</div>
+			</div>
+		</div>
+	</section>
+	</div>
+</body>
+<script>
+    function deal_event(e) {
+         $.ajax({
+            url: "dataalert",
+            type: "POST",
+            data: {
+                "event": "deal", "csrfmiddlewaretoken": '{{csrf_token}}',"id":e.name },
+            success: function () {
+                    alert("处理成功");
+                    location.reload();
+            }
+        })
+    }    
+    function over_event(e) {
+         $.ajax({
+            url: "dataalert",
+            type: "POST",
+            data: {
+                "event": "over", "csrfmiddlewaretoken": '{{csrf_token}}',"id":e.name },
+            success: function () {
+                    alert("处理成功");
+                    location.reload();
+            }
+        })
+    }    
+    function timeout_event(e) {
+         $.ajax({
+            url: "dataalert",
+            type: "POST",
+            data: {
+                "event": "timeout", "csrfmiddlewaretoken": '{{csrf_token}}',"id":e.name },
+            success: function () {
+                    alert("处理成功");
+                    location.reload();
+            }
+        })
+    }
+</script>
+{% include 'datatable/js.html' %}

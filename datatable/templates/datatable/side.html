@@ -1,0 +1,50 @@
+{% load staticfiles %}
+<aside class="app-sidebar">
+		{% if lv == 1 %}
+		<div class="app-sidebar__user">
+			<div class="dropdown">
+				<a class="nav-link pl-2 pr-2 leading-none d-flex" data-toggle="dropdown" href="#">
+					<img alt="image" src="https://img04.sogoucdn.com/v2/thumb/resize/w/120/h/90/zi/on/iw/90.0/ih/67.5?t=2&url=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20190929%2F0f5bcee8347f4addaadcda85f70870bc.jpeg&appid=200524" class=" avatar-md rounded-circle">
+					<br></br>
+                   
+					<span class="ml-2 d-lg-block">
+						<span class="text-white app-sidebar__user-name mt-5">{{username}}</span><br>
+						<span class="text-muted app-sidebar__user-name text-sm"> 办公人员</span>
+					</span>
+				</a>
+			</div>
+		</div>
+        {% endif %}
+		<ul class="side-menu">
+			<li class="slide">
+				<a class="side-menu__item"  data-toggle="slide" href="#"><i class="side-menu__icon fa fa-desktop"></i><span class="side-menu__label">数据统计总览</span><i class="angle fa fa-angle-right"></i></a>
+			    <ul class="slide-menu">
+					<li><a class="slide-item"  href="chart_mymap"><span>热点社区图</span></a></li>
+					<li><a class="slide-item"  href="chart_mychart1"><span>街道民生事件情况</span></a></li>
+					<li><a class="slide-item"  href="chart_mychart2"><span>民生事件性质统计</span></a></li>
+                    <li><a class="slide-item"  href="chart_mychart3"><span>民生事件结办分析</span></a></li>
+				</ul>
+            </li>
+            {% if lv == 1 %}
+			<li class="slide">
+				<a class="side-menu__item" href="datainput"><i class="side-menu__icon fa fa-flask"></i><span class="side-menu__label">数据添加</span><i class="angle fa fa-angle-right"></i></a>
+			</li>
+            <li class="slide">
+				<a class="side-menu__item" href="dataalert"><i class="side-menu__icon fa fa-tasks"></i><span class="side-menu__label">报警数据</span><i class="angle fa fa-angle-right"></i></a>
+			</li>
+            {% endif %}
+            {% if lv == 1 %}
+			<li class="slide">
+				<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-file-text"></i><span class="side-menu__label">意见反馈建议</span><i class="angle fa fa-angle-right"></i></a>
+				<ul class="slide-menu">
+					<li><a class="slide-item"  href="databack"><span>反馈意见表</span></a></li>
+					<li><a class="slide-item"  href="databackcheck"><span>反馈意见表查看</span></a></li>
+				</ul>
+			</li>
+            {% else %}
+            <li class="slide">
+				<a class="side-menu__item" href="databack"><i class="side-menu__icon fa fa-tasks"></i><span class="side-menu__label">反馈意见表</span><i class="angle fa fa-angle-right"></i></a>
+			</li>
+            {% endif %}
+		</ul>
+	</aside>

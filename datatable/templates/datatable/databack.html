@@ -1,0 +1,46 @@
+{% load staticfiles %}
+{% include 'datatable/head.html' %}
+<body class="app">
+    {% include 'datatable/top.html' %}
+	{% include 'datatable/side.html' %}
+	<div class="app-content">
+		<section class="section">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item">意见反馈建议</li>
+				<li class="breadcrumb-item active"><a href="index.html">返回上一级</a></li>
+			</ol>
+		<div class="Content-Main">
+			<div class="Content-Main1">
+				<h1>用户反馈</h1>
+			</div>
+			<form action="" method="POST" class="form-report">
+            {% csrf_token %}
+				<label>
+					<span>联系方式</span>
+					<select name="teltype" class="select2">
+						<option value="Email">邮箱</option>
+						<option value="Phone">电话</option>
+						<option value="QQ">QQ</option>
+					</select>
+					<input type="text2" name="tel" placeholder="请输入具体联系方式，方便我们及时进行反馈的回复">
+				</label>
+				<label>
+					<span>反馈信息</span>
+					<textarea name="msg"  placeholder="请填入你要反馈的信息"></textarea>
+				</label>
+				<label>
+					<span>问题类型</span>
+					<select name="questiontype" class="select1" value="typess">
+						<option value="用户问题">用户问题</option>
+						<option value="其他">其他</option>
+					</select>
+				</label>
+				<label>
+					<input type="submit" class="button" value="提交">
+				</label>
+			</form>
+		</div>
+		</section>
+	</div>
+</body>
+{% include 'datatable/js.html' %}

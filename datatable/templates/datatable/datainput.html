@@ -1,0 +1,103 @@
+{% load staticfiles %}
+{% include 'datatable/head.html' %}
+<body class="app">
+    {% include 'datatable/top.html' %}
+	{% include 'datatable/side.html' %}
+	<div class="app-content">
+
+		<p style=" text-align:center"><font  size="5">数据录入</font></p>
+			<section class="section" >    
+				<div class="row" >
+					<div class="card"  style="margin:0 auto;" >
+						<div class="card-body" >
+                            <form class="form" id="entry_form" action="" method="POST" onsubmit="return check()">
+                                {% csrf_token %}
+                                <table border="0" >
+									<tr>
+									            <td>&nbsp&nbsp</td>
+									</tr>
+									<tr>
+									            <td>&nbsp&nbsp</td>
+									</tr>
+                                    <tr>
+											<td>&nbsp&nbsp选择社区&nbsp&nbsp<input type="text" list="community" name="community" id="d1"/></td>
+                                            <td>&nbsp&nbsp事件&nbsp&nbsp<input type="text" list="eventtype" name="eventtype" id="d2"/></td>
+                                    </tr>
+									<tr>
+									            <td>&nbsp&nbsp</td>
+									</tr>
+									<tr>
+									            <td>&nbsp&nbsp事件类型&nbsp&nbsp<input type="text" list="way" name="way" id="d3"/></td>
+									            <td>&nbsp&nbsp来源&nbsp&nbsp<input type="text" list="src" name="src" id="d4"/></td>
+									</tr>
+									<tr>
+									            <td>&nbsp&nbsp</td>
+									</tr>
+									<tr>
+									            <td>&nbsp&nbsp</td>
+									</tr>
+									<tr>
+                                        <td for="meeting">&nbsp&nbsp时间&nbsp&nbsp<input id="d5" type="datetime-local" step="01" name="time" value="{{timenow}}"/></td>
+                                        <td for="meeting">&nbsp&nbsp上报单位&nbsp&nbsp<input id="d6" name="unit" type="text" list="unitname"/></td>
+									</tr>
+									<tr>
+									            <td>&nbsp&nbsp</td>
+									</tr>
+									<tr>
+									            <td>&nbsp&nbsp</td>
+									</tr>
+									<tr>
+										<td align="center" colspan="2">
+												<button align ="center" type="submit" id="entry_btn" class = "button" value="提交">提交</button>
+										</td>
+									</tr>
+                                </table>
+                             </form>
+						</div>
+					</div>
+				</div>
+			</section>
+	</div>
+</body>
+
+
+{% include 'datatable/js.html' %}
+{% include 'datatable/list.html' %}
+
+<script type="text/javascript">
+    function check(){
+        var uid = $("#d1").val();
+        if (uid == null || uid == "") {
+            alert("社区不能为空");
+            return false;
+        }
+        uid = $("#d2").val();
+        if (uid == null || uid == "") {
+            alert("事件不能为空");
+            return false;
+        }
+        uid = $("#d3").val();
+        if (uid == null || uid == "") {
+            alert("事件类型不能为空");
+            return false;
+        }
+        uid = $("#d4").val();
+        if (uid == null || uid == "") {
+            alert("来源不能为空");
+            return false;
+        }
+        uid = $("#d5").val();
+        if (uid == null || uid == "") {
+            alert("时间不能为空");
+            return false;
+        }
+        uid = $("#d6").val();
+        if (uid == null || uid == "") {
+            alert("上报单位不能为空");
+            return false;
+        }
+        alert("提交成功");
+        return true;
+    }
+    
+</script>
